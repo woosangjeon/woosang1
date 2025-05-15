@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electro Asura and Artificial Sun - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      body * {
+        color: #7a9daf !important;
+      }
+      @media (max-width: 700px) {
+        .background-image.electro-asura-bg-img {
+          background-size: 430% !important;
+          background-position: center center !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="electro-asura-bg">
+    <div class="background-image electro-asura-bg-img"></div>
+
+    <div class="content">
+      <a href="index.html">Back</a>
+      <div class="project-info">
+        <h1>Electro Asura and Artificial Sun</h1>
+        <p>2024</p>
+      </div>
+
+      <p>
+        "Electro Asura and Artificial Sun" is Aisthesis Savage's latest experimental work, a collaboration with Korean award-winning dancer
+        Woosang and Korean art production group Channel Crane. This cross-disciplinary new media theater performance integrates artificial
+        intelligence, enhanced electro-tactile technology, and immersive experiences.
+      </p>
+
+      <section>
+        <h2>Concept and Technology</h2>
+        <p>
+          The work demonstrates the path of human transformation into a cybernetic Asura, where dancers interface with Aisthesis Savage's
+          mechanical prosthetics and augmented sensory technology, engaging in dialogue with the embedded LLM-driven AI Agent Sun to explore
+          human perceptual mutations in the cyber age.
+        </p>
+      </section>
+
+      <section>
+        <h2>Performance Experience</h2>
+        <p>
+          The piece presents an unprecedented immersive performance combining large language models, immersive theater, and mechanical
+          prosthetics. Through data sculpture, artificial intelligence, and generative immersive experiences, we challenge audience
+          perceptions of performance art at C-Lab's Dome in Taipei.
+        </p>
+      </section>
+      <br />
+    </div>
+    <footer>
+      <section class="credits">
+        <h3>Event Information</h3>
+        <ul>
+          <li>Event - Crane first showcase at Art Korea Lab (AKL), Electro Asura and Artificial Sun at C-Lab</li>
+          <li>FutureVisionLab Title - Electro Asura and Artificial Sun</li>
+        </ul>
+
+        <h3>Channel Crane</h3>
+        <ul>
+          <li>Graphic Design & Branding | Kim Hyungjun</li>
+          <li>Website Development | Kim Hyunchul</li>
+          <li>Promotion Video Director | Ryuwu</li>
+          <li>Scenographer & Tech Director | Jung Daewon</li>
+          <li>Archive Film & Video Editing | Nam Donghyun</li>
+          <li>Production Coordinator | Lee Seungyeon</li>
+          <li>Acknowledgements | Lee Suhun</li>
+        </ul>
+
+        <h3>Production Team</h3>
+        <ul>
+          <li>Director | Aisthesis Savage Co., Ltd.</li>
+          <li>Executive Production | Crane, Aisthesis Savage Co., Ltd.</li>
+          <li>Choreographer | Woosang Jeon</li>
+          <li>Performer | Yuki Matsukura</li>
+          <li>AI System/Technical Design | Aisthesis Savage Co., Ltd</li>
+        </ul>
+      </section>
+    </footer>
+    <script>
+      let scrollTimeout;
+      window.addEventListener("scroll", () => {
+        document.body.classList.add("show-image-bg");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove("show-image-bg");
+        }, 300); // Remove after 300ms of no scroll
+      });
+    </script>
+  </body>
+</html>

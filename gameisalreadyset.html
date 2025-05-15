@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gameisalreadyset - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      body * {
+        color: #77ffe7 !important;
+      }
+
+      .content {
+        min-height: 80vh;
+        display: block;
+        z-index: 1;
+        position: relative;
+        padding-left: 0.5em;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 2rem;
+        text-align: left;
+        text-shadow: 2px 2px 8px #000;
+      }
+      .works-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 900px;
+        margin-bottom: 3rem;
+        margin-top: 3.5em;
+        justify-items: start;
+        text-align: left;
+      }
+      .work-link {
+        perspective: 600px;
+        display: inline-block;
+        padding: 0;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #77ffe7;
+        transition: color 0.2s, transform 0.2s;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: none !important;
+        margin-top: 3em;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        margin-left: 40%;
+      }
+      .work-link .flip-inner {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1), color 0.2s;
+        transform-style: preserve-3d;
+      }
+      .work-link.flipped .flip-inner {
+        transform: rotateX(180deg);
+        color: #fff !important;
+      }
+      .work-link:hover {
+        color: #ffffff !important;
+        background: none;
+        border-bottom: none !important;
+      }
+      .back-link {
+        display: inline-block;
+        margin: 0 0 2rem 0;
+        text-align: left;
+        color: #77ffe7;
+        text-decoration: none;
+        font-size: 1.1em;
+        border-bottom: none;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 0.5em;
+        padding: 0.5em 1.2em;
+        width: fit-content;
+      }
+      .back-link:hover {
+        color: #ffeb00;
+        background: rgba(0, 0, 0, 0.7);
+      }
+      @media (max-width: 600px) {
+        .works-grid {
+          grid-template-columns: 1fr;
+          gap: 0.3rem;
+          margin-top: 2em;
+          margin-bottom: 1.5em;
+        }
+        .work-link {
+          margin-top: 2em;
+          margin-bottom: 1em;
+          width: auto;
+          margin-left: 0;
+          text-align: left;
+          font-size: 1em;
+        }
+        .content {
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+        }
+        h1 {
+          font-size: 2em;
+        }
+      }
+      .screensaver {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s;
+        z-index: 9999;
+      }
+      .screensaver.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .screensaver img {
+        max-width: 60vw;
+        max-height: 60vh;
+        opacity: 0.85;
+      }
+      /* To show the screensaver with fade-in, use JS: document.getElementById('screensaver').classList.add('active');
+         To hide: document.getElementById('screensaver').classList.remove('active'); */
+
+      .logo {
+        position: absolute;
+        width: 300px;
+        animation: float 10s linear infinite alternate;
+      }
+
+      @keyframes float {
+        0% {
+          top: 10%;
+          left: 10%;
+        }
+        25% {
+          top: 30%;
+          left: 80%;
+        }
+        50% {
+          top: 60%;
+          left: 50%;
+        }
+        75% {
+          top: 80%;
+          left: 20%;
+        }
+        100% {
+          top: 10%;
+          left: 70%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screensaver" class="screensaver">
+      <img class="logo" src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263183/Logo_iasaft.png" alt="screensaver" />
+    </div>
+
+    <div class="background-image gameisalreadyset-bg-img"></div>
+    <div class="content">
+      <a href="index.html" class="back-link">Back</a>
+      <h1>gameisalreadyset</h1>
+      <div class="works-grid">
+        <a href="login.html" class="work-link"><span class="flip-inner">login</span></a>
+        <a href="command-and-perform.html" class="work-link"><span class="flip-inner">command and perform</span></a>
+        <a href="look-at-me-now-and-look-at-you.html" class="work-link"><span class="flip-inner">look at me now and look at you</span></a>
+        <a href="logout.html" class="work-link"><span class="flip-inner">logout</span></a>
+        <a href="trip.html" class="work-link"><span class="flip-inner">trip</span></a>
+        <a href="parasight.html" class="work-link"><span class="flip-inner">PARASIGHTseeing</span></a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document.querySelectorAll(".work-link").forEach((link) => {
+        link.addEventListener("mouseenter", () => link.classList.add("flipped"));
+        link.addEventListener("mouseleave", () => link.classList.remove("flipped"));
+      });
+
+      let idleTime = 0;
+      const screensaver = document.getElementById("screensaver");
+      function resetIdleTimer() {
+        idleTime = 0;
+        screensaver.classList.remove("active");
+      }
+      ["mousemove", "keydown", "scroll", "click"].forEach((evt) => document.addEventListener(evt, resetIdleTimer));
+      setInterval(() => {
+        idleTime++;
+        if (idleTime >= 15) {
+          screensaver.classList.add("active");
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

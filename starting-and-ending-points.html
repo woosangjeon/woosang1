@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starting and Ending Points - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      body * {
+        color: #3f2e63 !important;
+      }
+      .credits {
+        border-top: 1px solid #3f2e63;
+      }
+      .project-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .image-grid.three-by-two {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+        border: none;
+      }
+      .image-grid.three-by-two img {
+        width: 450px;
+        height: 350px;
+        object-fit: cover;
+        border: 1.5px solid #3f2e63 !important;
+        background: none;
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+        border-radius: 0;
+      }
+
+      .image-grid.three-by-two img:hover {
+        transform: scale(1.04);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      }
+
+      @media (max-width: 900px) {
+        .image-grid.three-by-two {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .image-grid.three-by-two {
+          grid-template-columns: 1fr;
+          padding: 1rem 0.2rem;
+        }
+        .image-grid.three-by-two img {
+          width: 100% !important;
+          max-width: 100vw;
+          height: auto !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="starting-ending-bg">
+    <div class="background-image starting-ending-bg-img"></div>
+
+    <div class="content">
+      <a href="index.html">Back</a>
+      <div class="project-info">
+        <h1>Starting Point and Ending Points</h1>
+        <p>2023</p>
+      </div>
+
+      <p>
+        David and Woo Sang aimed to reveal the limitations of human cognition, which possesses a dualistic epistemology, by distorting the
+        tempo, pitch, and other aspects of music that originated from female composers through Female Tunes. Additionally, they shared and
+        experienced the new vision that the music offers with the audience.
+      </p>
+
+      <section>
+        <h2>Performance Structure</h2>
+        <p>
+          The performance utilizes the two spaces of the stage and the audience to progress the work based on the energetic dialogue between
+          the audience and the performers. The two spaces represent two ideologies inspired by Donna J. Haraway's book "A Cyborg Manifesto."
+        </p>
+      </section>
+
+      <section>
+        <h2>Conceptual Framework</h2>
+        <p>
+          The focus is on the two ideological perspectives of the machine and the body, expressed through music and physical expression. We
+          visualize the naturalness of the body and create harmony by demonstrating the neutral state created by the mechanical movement of
+          the performers and conveying it to the audience.
+        </p>
+      </section>
+      <section class="gallery">
+        <div class="image-grid three-by-two">
+          <a
+            href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263224/Starting_point_and_ending_points_05_otbfrb.webp"
+            target="_blank">
+            <img
+              src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263224/Starting_point_and_ending_points_05_otbfrb.webp"
+              alt="Starting point and ending points 05" />
+          </a>
+          <a
+            href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_Ending_points_02_hrbsxe.jpg"
+            target="_blank">
+            <img
+              src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_Ending_points_02_hrbsxe.jpg"
+              alt="Starting point and Ending points 02" />
+          </a>
+          <a
+            href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_ending_points_04_rfwklk.webp"
+            target="_blank">
+            <img
+              src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_ending_points_04_rfwklk.webp"
+              alt="Starting point and ending points 04" />
+          </a>
+          <a
+            href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_ending_points_03_brms8u.webp"
+            target="_blank">
+            <img
+              src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263223/Starting_point_and_ending_points_03_brms8u.webp"
+              alt="Starting point and ending points 03" />
+          </a>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <section class="credits">
+        <ul>
+          <li>Event - Female Tunes Festival organized by Felina Theater</li>
+          <li>Co-choreographer & Performer - David kwiek</li>
+          <li>Co-choreographer & Performer & Prop maker - Woosang Jeon</li>
+        </ul>
+      </section>
+    </footer>
+    <script>
+      let scrollTimeout;
+      window.addEventListener("scroll", () => {
+        document.body.classList.add("show-image-bg");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove("show-image-bg");
+        }, 300); // Remove after 300ms of no scroll
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycle of Life - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body,
+      body * {
+        color: #ffd79a !important;
+      }
+
+      .gallery {
+        margin-bottom: 2rem;
+      }
+      .credits {
+        border-top: 1px solid #ffd79a;
+      }
+
+      @media (max-width: 600px) {
+        .content {
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+        }
+        iframe {
+          width: 100% !important;
+          height: auto !important;
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-image circle-of-life-bg-img"></div>
+    <a href="index.html">Back</a>
+
+    <section class="gallery">
+      <div class="image-grid">
+        <a
+          href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746277663/Screenshot_20250503_144758_Instagram_ak2t9q.jpg"
+          target="_blank">
+          <img
+            src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746277663/Screenshot_20250503_144758_Instagram_ak2t9q.jpg"
+            alt="Cycle of Life New 1" />
+        </a>
+        <a
+          href="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746277662/Screenshot_20250503_144749_Instagram_qtgg3u.jpg"
+          target="_blank">
+          <img
+            src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746277662/Screenshot_20250503_144749_Instagram_qtgg3u.jpg"
+            alt="Cycle of Life New 2" />
+        </a>
+      </div>
+    </section>
+    <div class="content" id="circle-of-life-content">
+      <div class="project-info">
+        <h1>Cycle of Life</h1>
+        <p>2024</p>
+      </div>
+      <p>
+        This piece centers on birth, death, and the journey of life in between. It draws on traditional Korean cultural rituals and Buddhist
+        teachings, embracing the concept of life's cyclical nature. The setup, with the doljanchi table opposite the jesa table, mirrors the
+        circle of samsara, where birth and death meet in a continuous loop.
+      </p>
+
+      <section>
+        <h2>Cultural Context</h2>
+        <p>
+          In Korean culture, families celebrate an infant's birth with a "doljanchi" gathering. The "doljabi" ritual, a main event, is a
+          fortune-telling tradition in which symbolic objects are placed before the child to predict aspects of their future. The jesa
+          ritual, in contrast, maintains familial connections across generations and bridges the past with the present.
+        </p>
+      </section>
+
+      <section>
+        <h2>Performance Structure</h2>
+        <p>
+          By placing the doljanchi and jesa tables opposite each other, the performance symbolizes the beginning and end of life. The piece
+          starts with the doljanchi celebration, and after a performance with dance, sound, and objects, it concludes with the jesa ritual.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <section class="credits">
+        <ul>
+          <li>Event - Club future east</li>
+          <li>Live music & composer - Sam Eyyaz</li>
+          <li>Choreographer & Performer & Prop maker & Set design - Woosang Jeon</li>
+        </ul>
+      </section>
+    </footer>
+    <script>
+      let scrollTimeout;
+      window.addEventListener("scroll", () => {
+        document.body.classList.add("show-image-bg");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove("show-image-bg");
+        }, 300); // Remove after 300ms of no scroll
+      });
+    </script>
+  </body>
+</html>

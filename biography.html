@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biography - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .credits {
+        border-top: 1px solid #ffeb00;
+      }
+      .screensaver {
+        position: fixed;
+        inset: 0;
+        background: #000957;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s;
+        z-index: 9999;
+      }
+      .screensaver.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      /* To show the screensaver (fade in blue):
+         document.getElementById('screensaver').classList.add('active');
+         To hide (fade out to image):
+         document.getElementById('screensaver').classList.remove('active');
+      */
+      body#index {
+        background: #000957 !important;
+        position: relative;
+      }
+      body#index::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: url("https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746263145/Collaboration_with_Elli_02_fliwdt.jpg") center
+          center/cover no-repeat;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s;
+      }
+      body#index.show-image-bg::before {
+        opacity: 0.35;
+      }
+      @media (max-width: 700px) {
+        .bio-profile-pic-outside {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="index">
+    <div id="screensaver" class="screensaver"></div>
+
+    <div class="bio-header-content">
+      <a href="index.html">Back</a>
+      <h1>Biography</h1>
+      <p>
+        Woosang Jeon is a performer, choreographer, and performance director based in Berlin, Germany. He graduated from the Korea National
+        University of Arts (K-ARTS) in Seoul, completing both his Bachelor's and Master's degrees in Dance. During his academic training, he
+        focused on contemporary dance technique and choreography, while also researching and exploring concepts of performativity.
+      </p>
+    </div>
+
+    <p>
+      Upon graduation, Woosang immediately began his professional career as a dancer with LDP Company in 2017, establishing his presence in
+      the Korean dance scene. In 2018, he expanded his career by joining the Korea National Dance Company as a choreography assistant,
+      contributing to the project Man Made. His independent works gained international recognition early on, with his creation Lost Room
+      being invited to the MASDANZA Festival in Gran Canaria and Bratislava in Movement in Slovakia in 2017.
+    </p>
+
+    <p>
+      In 2020, Woosang moved to Berlin, where he performed in Beautiful Landscapes by Kosmas Kosmopoulos / LUNA PARK and Big Boys Don't Cry…
+      But When They Do? by Marion Sparber. His collaborations with Marion Sparber and Alan Fuentes Guerra led to performances in four of
+      Sparber's productions, touring Germany, Italy, and Austria, including appearances at prestigious festivals such as Alps Move, Ulm
+      Moves, and Lurupina Zirkus.
+    </p>
+
+    <p>
+      In early 2021, Woosang co-founded gameisalreadyset, a multidisciplinary art collective based at Artist-Homes Berlin, where he actively
+      works as a performance director and choreographer. The collective's debut project was presented in two screenings, further expanding
+      its artistic reach. Throughout 2021, Woosang also performed in The Urge by Ceren Oran, Tanz in Oberaudorf by Jasmine Ellis, and
+      Onomatopoeia.
+    </p>
+
+    <p>
+      Woosang continued his international journey in 2022, performing in Collective Behavior — a co-production between the artist collective
+      Kimchi and Chips and Danish choreographer Simone Wierød, with performances in Korea. Upon returning to Germany, he created and
+      performed in AniBody by Seunghwan Lee, showcased at Choreographisches Centrum Heidelberg, Theater Felina Mannheim, and LAB Mannheim.
+      He also joined Eric Trottier's team for Us at Eintanzhaus Mannheim and Tanzlabor Ulm.
+    </p>
+
+    <p>
+      As part of gameisalreadyset, Woosang collaborated with Wonjune Choi as performance director for PARASIGHTseeing, a project produced by
+      Frederik Britzlmair and Jasmin Halama in Berlin. In January 2023, Woosang participated as a guest artist at a gallery opening at Molt
+      in Berlin, marking another milestone in his expanding artistic network.
+    </p>
+
+    <p>
+      As of 2024, Woosang Jeon became a full-time member of the internationally renowned dance and theatre company CONSTANZA MACRAS / DORKY
+      PARK, where he continues to contribute his creative talents and performance expertise to the company's groundbreaking productions.
+      This collaboration represents a significant milestone in his career, aligning him with one of the most innovative and established
+      companies in the international dance and theatre world.
+    </p>
+
+    <section class="work-list">
+      <div class="work-item">
+        <h3>Login</h3>
+        <ul>
+          <li>Role: Co-Director & Performer & Prop maker</li>
+          <li>Date: 13. January 2023</li>
+          <li>Location: MOLT, Berlin</li>
+          <li>Director: gameisalreadyset</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Command and Perform</h3>
+        <ul>
+          <li>Role: Co-Director & Performer</li>
+          <li>Date: 05. March 2023</li>
+          <li>Location: Zentrale.space, Berlin</li>
+          <li>Presented by: The Magnolia Market</li>
+          <li>Director: gameisalreadyset</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Starting and Ending Points</h3>
+        <ul>
+          <li>Role: Co-Director & Performer & installation artist</li>
+          <li>Date: 16. March 2023</li>
+          <li>Location: Theater Felina, Mannheim</li>
+          <li>Presented by: Female Tunes Festival</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Love Songs</h3>
+        <ul>
+          <li>Role: Dancer</li>
+          <li>Date: 12/13. May 2023</li>
+          <li>Location: Heiliggeistkirche, Heidelberg</li>
+          <li>Choreographer: Christina Liakopoyloy</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Reality Warping</h3>
+        <ul>
+          <li>Role: Performer</li>
+          <li>Date: 15-17. June & 22-23. June 2023</li>
+          <li>Location: HochX Theater, Munich & ARGEkultur, Salzburg</li>
+          <li>Director/Choreographer: Jasmine Ellis</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>BIG BOYS DON'T CRY... BUT WHEN THEY DO?</h3>
+        <ul>
+          <li>Role: Dancer</li>
+          <li>Date: 17-19. November 2023</li>
+          <li>Location: HOLZMARKT25, Berlin</li>
+          <li>Presented by: Zeit für Zirkus</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Look at Me Now and Look at You</h3>
+        <ul>
+          <li>Role: Co-Director & Performer & installation artist</li>
+          <li>Date: 08. December 2023</li>
+          <li>Location: MOLT, Berlin</li>
+          <li>Director: gameisalreadyset</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>DRAMA</h3>
+        <ul>
+          <li>Role: Performer</li>
+          <li>Date: 20-22. June 2024</li>
+          <li>Presented & Location: Aranya Theater Festival, Qinhuangdao, north China</li>
+          <li>Director/Choreographer: Constanza Macras</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>The Hunger</h3>
+        <ul>
+          <li>Role: Performer</li>
+          <li>Premiere Date: 27. September 2024</li>
+          <li>Presented & Location: Volksbühne am Rosa-Luxemburg-Platz, Berlin</li>
+          <li>Director/Choreographer: Constanza Macras</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Art Korea Lab Exhibition & Showcase</h3>
+        <ul>
+          <li>Role: Choreographer</li>
+          <li>Date: 11-13. December 2024</li>
+          <li>Location: Arts Korea Lab(아트코리아랩), Seoul</li>
+          <li>Produced by: Channel Crane</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Electro Asura and Artificial Sun</h3>
+        <ul>
+          <li>Role: Choreographer</li>
+          <li>Date: 27-29. December 2024</li>
+          <li>Location: C-Lab FutureVisionLab, Taipei</li>
+          <li>AI System/Technical Design: Aisthesis Savage</li>
+          <li>Director: Jiun Lai(Aisthesis Savage)</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Circle of Life</h3>
+        <ul>
+          <li>Role: Director & Performer</li>
+          <li>Date: 12. December 2024</li>
+          <li>Location: OHM, Berlin</li>
+          <li>Presented by: CLUB FUTURE EAST, Berlin</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Church Battle</h3>
+        <ul>
+          <li>Role: Jury</li>
+          <li>Date: 1/2. Feburary 2025</li>
+          <li>Location: Heiliggeistkirche, Heidelberg</li>
+          <li>Organized by: David kwiek, Christina Liakopoyloy</li>
+        </ul>
+      </div>
+
+      <div class="work-item">
+        <h3>Back to the Present. New Version</h3>
+        <ul>
+          <li>Role: Performer</li>
+          <li>Date: 27/28 March 2025</li>
+          <li>Presented & Location: Volksbühne am Rosa-Luxemburg-Platz, Berlin</li>
+          <li>Choreography, Concept & Direction: Constanza Macras</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="credits">
+      <p>Photo by Ellena Stelzer</p>
+    </footer>
+    <script>
+      let scrollTimeout;
+      window.addEventListener("scroll", () => {
+        document.body.classList.add("show-image-bg");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove("show-image-bg");
+        }, 300); // Remove after 300ms of no scroll
+      });
+    </script>
+  </body>
+</html>

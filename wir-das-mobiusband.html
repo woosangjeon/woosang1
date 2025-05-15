@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wir, das Möbiusband - Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .blue-overlay {
+        background-color: rgba(60, 165, 107, 0.6) !important;
+      }
+      .video {
+        margin-bottom: 0 !important;
+      }
+      .video-container {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-image wir-mobiusband-bg-img"></div>
+    <div class="blue-overlay"></div>
+    <div class="content">
+      <a href="index.html">Back</a>
+      <div class="project-info">
+        <h1>Wir, das Möbiusband</h1>
+        <p>2021</p>
+      </div>
+
+      <section class="video">
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/chwJczPPz9Y"
+            title="Wir, das Möbiusband"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <p>
+        A dissonance of the self.
+        <br />
+        <br />
+        Through a series of looping actions and shifting spatial compositions, two performers embody the paradox of a self unmoored from its
+        core identity. The work visualizes emotional disconnection and internal conflict, drawing the audience into a cycle of repetition
+        and distortion. In a fleeting rupture, a glimpse of the true self emerges, only to be reabsorbed into the false world.
+      </p>
+
+      <footer>
+        <section class="credits">
+          <ul>
+            <li>Co-Director Jong Ha Kim & Woosang Jeon</li>
+          </ul>
+        </section>
+      </footer>
+    </div>
+    <script>
+      let scrollTimeout;
+      window.addEventListener("scroll", () => {
+        document.body.classList.add("show-image-bg");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.body.classList.remove("show-image-bg");
+        }, 300); // Remove after 300ms of no scroll
+      });
+    </script>
+  </body>
+</html>

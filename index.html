@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woo Sang Jeon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .screensaver {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s;
+        z-index: 9999;
+      }
+      .screensaver.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .screensaver img {
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        max-width: 180px;
+        max-height: 180px;
+        opacity: 0.85;
+        margin: 0;
+      }
+      .worksbox {
+        margin-top: 100px;
+      }
+      /* To show the screensaver with fade-in, use JS: document.getElementById('screensaver').classList.add('active');
+         To hide: document.getElementById('screensaver').classList.remove('active'); */
+
+      .logo {
+        position: absolute;
+        width: 340px;
+      }
+      a {
+        width: auto !important;
+      }
+      @media (max-width: 700px) {
+        .screensaver img {
+          left: auto !important;
+          right: 2em !important;
+          top: 2em !important;
+        }
+        h1 {
+          padding-left: 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body id="index">
+    <div id="screensaver" class="screensaver">
+      <img class="logo" src="https://res.cloudinary.com/dwlzn6c4l/image/upload/v1746481161/1746286970264_yyxakr.png" alt="screensaver" />
+    </div>
+    <div class="worksbox">
+      <h1>
+        Works
+        <span class="icon-hieroglyph">𓀐</span>
+      </h1>
+      <ul>
+        <li><a href="starting-and-ending-points.html">Starting Point and Ending Points</a></li>
+        <li><a href="electro-asura-and-artificial-sun.html">Electro Asura and Artificial Sun</a></li>
+        <li><a href="circle-of-life.html">Circle of Life</a></li>
+        <li><a href="wir-das-mobiusband.html">Wir, das Möbiusband</a></li>
+
+        <li><a href="church-battle.html">Church Battle</a></li>
+      </ul>
+    </div>
+    <br />
+    <br />
+    <div class="biobox">
+      <ul>
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3 id="gameisalreadyset">
+            <span class="icon-gameisalreadyset">⟟</span>
+            <a href="gameisalreadyset.html">gameisalreadyset</a>
+          </h3>
+        </li>
+      </ul>
+    </div>
+    <br />
+    <br />
+
+    <script src="script.js"></script>
+    <script>
+      let idleTime = 0;
+      const screensaver = document.getElementById("screensaver");
+      function resetIdleTimer() {
+        idleTime = 0;
+        screensaver.classList.remove("active");
+      }
+      ["mousemove", "keydown", "scroll", "click"].forEach((evt) => document.addEventListener(evt, resetIdleTimer));
+      setInterval(() => {
+        idleTime++;
+        if (idleTime >= 15) {
+          screensaver.classList.add("active");
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
