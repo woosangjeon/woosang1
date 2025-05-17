@@ -3,27 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#000000">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-capable" content="yes">
     <title>Church Battle</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      #video1 {
-       
-        border-radius: 12px;
-      }
-      #video2 {
-       
-        border-radius: 12px;
-      }
       a {
         border-bottom: none;
       }
-  
+
+      iframe {
+        vertical-align: top;
+        display: block;
+      }
+
+      .content .video-row {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 0.5rem;
+        align-items: start;
+      }
+
+      .content .video-wrapper {
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        overflow: hidden;
+      }
+
+      .content .video-wrapper iframe {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        border: none;
+      }
+
+      .content .video-wrapper.large-video {
+        width: 100% !important;
+        max-width: none !important;
+      }
+
+      .content {
+        max-width: 1200px !important;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 700px) {
+        .content .video-row {
+          grid-template-columns: 1fr !important;
+        }
+      }
     </style>
   </head>
-  
   <body id="index">
     <div class="background-image church-battle-bg-img"></div>
     <div class="content">
@@ -44,18 +73,20 @@
       <section class="video">
         <h2>Judge show</h2>
         <div class="video-row">
-          <video
-            id="video1"
-            src="https://res.cloudinary.com/dwlzn6c4l/video/upload/v1746277737/VID-20250203-WA0004_lkd0xe.mp4"
-            controls
-            playsinline
-            style="max-width: 300px; width: 100%; display: block; margin: 0 auto 2rem auto; object-fit: contain"></video>
-          <video
-            id="video2"
-            src="https://res.cloudinary.com/dwlzn6c4l/video/upload/v1746277731/VID-20250203-WA0003_arrgyo.mp4"
-            controls
-            playsinline
-            style="max-width: 400px; width: 100%; display: block; margin: 0 auto; object-fit: contain"></video>
+          <div class="video-wrapper large-video">
+            <iframe
+              src="https://player.vimeo.com/video/1085258425"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://player.vimeo.com/video/1085259000"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
         </div>
       </section>
     </div>
