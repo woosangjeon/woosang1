@@ -3,49 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#ffeb00">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Church Battle</title>
     <link rel="stylesheet" href="style.css" />
-   <style>
+    <style>
       a {
         border-bottom: none;
       }
-       #judge-show-1 {width: 400px; height: 500px;}
-      #judge-show-2 {width: 340px; height: 400px;}
-      iframe {
-        vertical-align: top;
-        display: block;
-      }
-
       .content .video-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
       }
-
       .content .video-wrapper {
-        width: 100% 
-        aspect-ratio: 16 / 9 !important;
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16 / 9;
         overflow: hidden;
-      }
 
+        background: #000;
+        display: flex;
+        align-items: stretch;
+      }
+      .content .video-wrapper.first-video {
+        background: none;
+        max-width: 1200px;
+      }
       .content .video-wrapper iframe {
-        width: 100% 
-        height: 100% !important;
+        width: 100%;
+        height: 100%;
         display: block;
         border: none;
       }
-
-      .content .video-wrapper.large-video {
-        width: 100% !important;
-        max-width: none !important;
-      }
-
       .content {
-        max-width: 1200px !important;
+        max-width: 1000px !important;
         margin: 0 auto;
         padding: 0 1rem;
       }
@@ -53,9 +47,25 @@
         max-width: 1200px !important;
       }
 
+      .background-image.church-battle-bg-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+
       @media (max-width: 700px) {
         .content .video-row {
-          grid-template-columns: 1fr !important;
+          gap: 1rem;
+        }
+        .content .video-wrapper.first-video {
+          max-width: 100vw;
+          width: 100%;
         }
       }
     </style>
@@ -80,16 +90,18 @@
       <section class="video">
         <h2>Judge show</h2>
         <div class="video-row">
-          <div class="video-wrapper large-video">
-            <iframe id="judge-show-1"
-              src="https://player.vimeo.com/video/1085258425"
+          <div class="video-wrapper">
+            <iframe
+              id="judge-show-2"
+              src="https://player.vimeo.com/video/1085259000"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen></iframe>
           </div>
-          <div class="video-wrapper">
-            <iframe id="judge-show-2"
-              src="https://player.vimeo.com/video/1085259000"
+          <div class="video-wrapper first-video">
+            <iframe
+              id="judge-show-1"
+              src="https://player.vimeo.com/video/1085258425"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen></iframe>
